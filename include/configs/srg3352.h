@@ -13,8 +13,8 @@
  * GNU General Public License for more details.
  */
 
-#ifndef __CONFIG_AM335X_EVM_H
-#define __CONFIG_AM335X_EVM_H
+#ifndef __CONFIG_SRG3352_H
+#define __CONFIG_SRG3352_H
 
 #include <configs/ti_am335x_common.h>
 #include <linux/sizes.h>
@@ -89,7 +89,6 @@
 	func(LEGACY_MMC, legacy_mmc, 0) \
 	func(MMC, mmc, 1) \
 	func(LEGACY_MMC, legacy_mmc, 1) \
-	func(NAND, nand, 0) \
 	BOOT_TARGET_PXE(func) \
 	BOOT_TARGET_DHCP(func)
 
@@ -139,7 +138,7 @@
 		"run ramargs; " \
 		"bootz ${loadaddr} ${rdaddr} ${fdtaddr}\0" \
 	"findfdt="\
-		"if test $board_name = srg3352c; then " \
+		"if test $board_name = srt3352; then " \
 			"setenv fdtfile am335x-srt3352c.dtb; fi; " \
 		"if test $board_name = A335BONE; then " \
 			"setenv fdtfile am335x-bone.dtb; fi; " \
@@ -343,4 +342,4 @@
 #define CLK_SYNTHESIZER_I2C_ADDR 0x65
 #endif
 
-#endif	/* ! __CONFIG_AM335X_EVM_H */
+#endif	/* ! __CONFIG_SRG3352_H */

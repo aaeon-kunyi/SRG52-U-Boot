@@ -838,6 +838,7 @@ int board_late_init(void)
 	if (board_is_bben())
 		name = "BBEN";
 	set_board_info_env(name);
+	set_project_info_env();
 
 	/*
 	 * Default FIT boot on HS devices. Non FIT images are not allowed

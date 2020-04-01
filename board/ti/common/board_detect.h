@@ -370,6 +370,12 @@ u64 board_ti_get_emif1_size(void);
 u64 board_ti_get_emif2_size(void);
 
 /**
+ * set_project_info_env() - Setup commonly used project information
+ *                          environment vars
+ */
+void set_project_info_env(void);
+
+/**
  * set_board_info_env() - Setup commonly used board information environment vars
  * @name:	Name of the board
  *
